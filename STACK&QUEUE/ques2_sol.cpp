@@ -52,6 +52,8 @@ int main(){
      cout<<endl;
      reve_display(st);
 
+     cout<<st.top();
+
 }
 
 
