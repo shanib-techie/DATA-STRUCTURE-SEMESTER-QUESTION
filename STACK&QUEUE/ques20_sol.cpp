@@ -18,8 +18,18 @@ void display(stack<int>& st){
         temp.pop();
     }
 }
-void rev_stack_using_queue(stack<int>  st ){
-
+void rev_stack_using_queue(stack<int>&  st ){
+    queue<int> temp;
+        int n = st.size();
+    for(int i = 1;i<=n;i++){
+        int x = st.top();
+        temp.push(x);
+        st.pop();
+    }
+       for(int i = 1;i<=n;i++){
+        st.push(temp.front());
+        temp.pop();
+    }
 }
 int main(){
     stack<int> s;
@@ -36,5 +46,10 @@ int main(){
     cout<<endl;
    cout<< s.top();
    cout<< s.size();
+   cout<<endl;
+rev_stack_using_queue(s);
+cout<<"\n"<<s.top();
+ display(s);
+
 
 }
