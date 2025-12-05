@@ -51,5 +51,7 @@ int main (){
         }
     }
     display(head);
+    midd_ele(head);
+    // display();
 }
 
