@@ -24,19 +24,28 @@ class circu_DDL{
     void display(){
   
         
-    if (head == NULL) return;
+    // if (head == NULL) return;
 
-    Node* temp = head;
-    while (true) {
-        cout << temp->val << " ";
-        temp = temp->next;
+    // Node* temp = head;
+    // while (true) {
+    //     cout << temp->val << " ";
+    //     temp = temp->next;
 
-        if (temp == head)   // LOOP BREAK CONDITION
-            break;
+    //     if (temp == head)   // LOOP BREAK CONDITION
+    //         break;
+    
+    while (head!=NULL)
+    {
+        cout<<head->val<<" ";
+        head = head->next;
+        /* code */
+    }
+   cout<<endl; 
+
     }
 
 
-    }
+    
     void insert_At_tail(int val){
         Node* t = new Node(val);
             if (head == NULL) {
